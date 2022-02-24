@@ -16,7 +16,7 @@ docker context use ecsDocker${run_number}
 docker compose -f docker-compose.yaml up
 while [ -z "docker ps --filter status=running | grep app" ]; do sleep 1; done;
 echo "App is ready!"
-docker compose ps
+#docker compose ps
 
 # generate cloud formation templates
 # docker compose -f docker-compose.yaml convert > aws-cloudformation.yaml
